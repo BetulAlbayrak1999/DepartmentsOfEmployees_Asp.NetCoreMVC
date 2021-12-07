@@ -1,0 +1,16 @@
+﻿@model mvc_project.Models.Department
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<form asp-controller="Department" asp-action="UpdateDepartment" method="post">
+    <b> Department Id</b>
+    <input asp-for="DepartmentId" placeholder="your Department Id" class="form-control" />
+    <br />
+    <b> Department Name</b>
+    <input asp-for="DepartmentName" placeholder="your Department Name" class="form-control" />
+    <br />
+    <button class="btn btn-info" style="background-color:coral, lemonchiffon; color:indigo">Enter</button>
+</form>

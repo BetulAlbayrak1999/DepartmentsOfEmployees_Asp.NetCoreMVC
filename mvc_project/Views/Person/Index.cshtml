@@ -1,0 +1,34 @@
+﻿@using mvc_project.Models
+@model List<Person>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>City</th>
+        <th>departmentId</th>
+        <th>Delete</th>
+        <th>Update</th>
+        <th>Details</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.PersonId</td>
+            <td>@x.PersonName</td>
+            <td>@x.PersonSurname</td>
+            <td>@x.PersonCity</td>
+            <td>@x.Department.DepartmentName</td>
+            <th><a href="/Person/DeletePerson/@x.PersonId" class="btn btn-danger">Delete</a></th>
+            <th><a href="/Person/GetPerson/@x.PersonId" class="btn btn-success">Update</a></th>
+
+        </tr>
+    }
+</table>
+<a href="/Person/NewPerson/" class="btn btn-primary">new Person</a>

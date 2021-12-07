@@ -1,0 +1,29 @@
+﻿@using mvc_project.Models
+@model List<Person>
+@{
+    ViewData["Title"] = "DepartmentDetail";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+ 
+<br />
+<h2>@ViewBag.depName Department</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>City</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.PersonId</td>
+            <td>@x.PersonName</td>
+            <td>@x.PersonSurname</td>
+            <td>@x.PersonCity</td>
+
+        </tr>
+    }
+</table>

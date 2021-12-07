@@ -1,0 +1,27 @@
+﻿@model mvc_project.Models.Person
+@{
+    ViewData["Title"] = "NewPerson";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+    <b> Person Id</b>
+    <input asp-for="PersonId" placeholder="Enter Person Id" class="form-control" />
+    <br />
+    <b> Person Name</b>
+    <input asp-for="PersonName" placeholder="Enter Person Name" class="form-control" />
+    <br /> 
+    <b> Person Surname</b>
+    <input asp-for="PersonSurname" placeholder="Enter Person Surname" class="form-control" />
+    <br /> 
+    <b> Person City</b>
+    <input asp-for="PersonCity" placeholder="Enter Person City" class="form-control" />
+    <br />
+    <b> Department Name</b>
+    @Html.DropDownListFor(x => x.Department.DepartmentId, (List<SelectListItem>)ViewBag.departs, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Enter</button>
+
+</form>
+

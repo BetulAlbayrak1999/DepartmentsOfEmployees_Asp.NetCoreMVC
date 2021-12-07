@@ -1,0 +1,18 @@
+﻿@model mvc_project.Models.Department
+@{
+    ViewData["Title"] = "newDepartment";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+    <b> Department Id</b>
+    <input asp-for="DepartmentId" placeholder="Enter Department Id" class="form-control" />
+    <br />
+    <b> Department Name</b>
+    <input asp-for="DepartmentName" placeholder="Enter Department Name" class="form-control" />
+    <br />
+    <button class="btn btn-info">Enter</button>
+
+</form>
+
